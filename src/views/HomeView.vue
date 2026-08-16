@@ -88,22 +88,24 @@ const slides = [
 
         <nav class="navbar navbar-expand-lg fixed-top">
 
-            <div class="container">
+            <div class="container position-relative">
+
+                <!-- BRAND — always visible -->
+                <a href="#" class="navbar-brand">
+                    RenC<span>.</span>
+                </a>
 
                 <!-- MOBILE BUTTON -->
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
-                    aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-
                 <!-- NAVBAR -->
-
                 <div id="mainNavbar" class="collapse navbar-collapse">
 
                     <!-- LEFT -->
-
                     <ul class="navbar-nav gap-lg-2">
 
                         <li class="nav-item">
@@ -132,17 +134,8 @@ const slides = [
 
                     </ul>
 
-
-                    <!-- LOGO -->
-
-                    <a href="#" class="navbar-brand mx-lg-auto">
-                        RenC<span>.</span>
-                    </a>
-
-
                     <!-- RIGHT -->
-
-                    <div class="navbar-right d-flex align-items-center">
+                    <div class="navbar-right d-flex align-items-center ms-lg-auto">
 
                         <button class="btn-navbar" @click="changeLanguage">
                             {{ language }}
@@ -175,110 +168,50 @@ const slides = [
         <!-- ================================================= -->
 
         <section id="booking" class="hero-section">
-
             <img :src="heroImage" class="hero-img" alt="Luxury car">
-
             <div class="hero-overlay"></div>
-
-
-            <div class="container hero-content">
-
-                <h1 class="hero-title">
-                    Luxury car
-                    <br>
-                    rental
+            <div class="container hero-content text-center text-lg-start">
+                <h1 class="hero-title" data-aos="fade-up">
+                    Luxury car<br>rental
                 </h1>
-
-                <button class="btn-banner">
+                <button class="btn-banner" data-aos="fade-up" data-aos-delay="200">
                     Rent now
                 </button>
-
             </div>
 
-
-            <!-- BOOKING -->
-
-            <div class="booking-wrapper">
-
-                <div class="row align-items-center">
-
-                    <!-- PICKUP ADDRESS -->
-
-                    <div class="col-lg-3 col-md-6 booking-item">
-
-                        <div class="booking-content">
-
-                            <h3>
-                                Pick Up Address
-                            </h3>
-
-                            <p>
-                                From: address, airport...
-                            </p>
-
+            <!-- BOOKING WIDGET -->
+            <div class="booking-container">
+                <div class="container">
+                    <div class="booking-wrapper">
+                        <div class="row align-items-center g-0">
+                            <div class="col-lg-3 col-md-4 booking-item">
+                                <div class="booking-content">
+                                    <h3>Pick Up Address</h3>
+                                    <p>From: address, airport...</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 booking-item">
+                                <div class="booking-content">
+                                    <h3>Pick Up Date</h3>
+                                    <p>JUN 11, 2025</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 booking-item">
+                                <div class="booking-content">
+                                    <h3>Pick Up Time</h3>
+                                    <p>12:00 AM</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-12">
+                                <button class="booking-button">
+                                    <i class="bi bi-calendar3 d-none d-lg-inline"></i>
+                                    <span>Book Now</span>
+                                </button>
+                            </div>
                         </div>
-
                     </div>
-
-
-                    <!-- DATE -->
-
-                    <div class="col-lg-3 col-md-6 booking-item">
-
-                        <div class="booking-content">
-
-                            <h3>
-                                Pick Up Date
-                            </h3>
-
-                            <p>
-                                JUN 11, 2025
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- TIME -->
-
-                    <div class="col-lg-3 col-md-6 booking-item">
-
-                        <div class="booking-content">
-
-                            <h3>
-                                Pick Up Time
-                            </h3>
-
-                            <p>
-                                12:00 AM
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- BUTTON -->
-
-                    <div class="col-lg-3 col-md-6">
-
-                        <button class="booking-button">
-
-                            <i class="bi bi-calendar3"></i>
-
-                            <span>
-                                Book Now
-                            </span>
-
-                        </button>
-
-                    </div>
-
                 </div>
-
             </div>
-
         </section>
 
 
@@ -293,8 +226,7 @@ const slides = [
                 <div class="row g-4 align-items-center">
 
                     <!-- TEXT -->
-
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 order-2 order-lg-1">
 
                         <div class="about-text">
 
@@ -313,10 +245,8 @@ const slides = [
 
                     </div>
 
-
                     <!-- IMAGE -->
-
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 order-1 order-lg-2">
 
                         <div class="about-image-wrapper" data-aos="fade-right">
 
@@ -326,10 +256,8 @@ const slides = [
 
                     </div>
 
-
                     <!-- EXPERIENCE -->
-
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 order-3">
 
                         <div class="experience-card" data-aos="fade-left">
 
@@ -344,7 +272,6 @@ const slides = [
                                 </p>
 
                             </div>
-
 
                             <div class="experience-image" data-aos="fade-up-left">
 
@@ -373,7 +300,7 @@ const slides = [
 
                 <div class="row g-0">
 
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 order-2 order-lg-1">
 
                         <div class="offer-content">
 
@@ -398,8 +325,7 @@ const slides = [
 
                     </div>
 
-
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 order-1 order-lg-2">
 
                         <div class="offer-image">
 
@@ -431,7 +357,7 @@ const slides = [
 
                     <SwiperSlide v-for="(slide, index) in slides" :key="index">
 
-                        <img :src="slide" alt="Luxury car">
+                        <img :src="slide" alt="Luxury car" loading="lazy">
 
                     </SwiperSlide>
 
@@ -454,7 +380,6 @@ const slides = [
                     Vehicles
                 </h1>
 
-
                 <div class="row g-4">
 
                     <div v-for="vehicle in vehicles" :key="vehicle.name" class="col-xl-3 col-lg-3 col-md-6 col-12">
@@ -474,10 +399,9 @@ const slides = [
 
                             </div>
 
-
                             <div class="vehicle-image">
 
-                                <img :src="vehicle.image" :alt="vehicle.name">
+                                <img :src="vehicle.image" :alt="vehicle.name" loading="lazy">
 
                             </div>
 
@@ -505,7 +429,6 @@ const slides = [
             <div class="row g-5">
 
                 <!-- COMPANY -->
-
                 <div class="col-lg-4 col-md-6">
 
                     <h2 class="footer-logo">
@@ -520,26 +443,25 @@ const slides = [
                         0321 0575190
                     </p>
 
-
                     <div class="social-icons">
 
-                        <a href="#">
+                        <a href="#" aria-label="YouTube">
                             <i class="bi bi-youtube"></i>
                         </a>
 
-                        <a href="#">
+                        <a href="#" aria-label="Facebook">
                             <i class="bi bi-facebook"></i>
                         </a>
 
-                        <a href="#">
+                        <a href="#" aria-label="Twitter">
                             <i class="bi bi-twitter-x"></i>
                         </a>
 
-                        <a href="#">
+                        <a href="#" aria-label="Instagram">
                             <i class="bi bi-instagram"></i>
                         </a>
 
-                        <a href="#">
+                        <a href="#" aria-label="LinkedIn">
                             <i class="bi bi-linkedin"></i>
                         </a>
 
@@ -547,9 +469,7 @@ const slides = [
 
                 </div>
 
-
                 <!-- RENTERS -->
-
                 <div class="col-lg-2 col-md-6">
 
                     <h3>
@@ -598,9 +518,7 @@ const slides = [
 
                 </div>
 
-
                 <!-- RESOURCES -->
-
                 <div class="col-lg-2 col-md-6">
 
                     <h3>
@@ -649,9 +567,7 @@ const slides = [
 
                 </div>
 
-
                 <!-- CONTACT -->
-
                 <div class="col-lg-4 col-md-6">
 
                     <h3>
@@ -694,7 +610,6 @@ const slides = [
 
             </div>
 
-
             <div class="footer-bottom">
 
                 © 2025 Renc LLC. All rights reserved
@@ -710,6 +625,19 @@ const slides = [
 
 <style scoped>
 /* ================================================= */
+/* BASE */
+/* ================================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ================================================= */
 /* NAVBAR */
 /* ================================================= */
 
@@ -723,6 +651,7 @@ header {
 
 .navbar {
     padding: 20px 0;
+    transition: background 0.3s, padding 0.3s;
 }
 
 .navbar-brand {
@@ -730,6 +659,7 @@ header {
     font-size: 30px;
     font-weight: 700;
     font-family: "Ubuntu", sans-serif;
+    z-index: 2;
 }
 
 .navbar-brand:hover {
@@ -742,17 +672,24 @@ header {
 
 .nav-link {
     color: white !important;
-    font-size: 18px;
-    padding: 8px 10px !important;
+    font-size: 17px;
+    padding: 8px 14px !important;
+    transition: color 0.3s;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link:focus {
     color: #c97e5f !important;
 }
 
 .navbar-toggler {
     background: white;
     border: none;
+    padding: 6px 10px;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 3px rgba(201, 126, 95, 0.4);
 }
 
 .navbar-right {
@@ -760,11 +697,19 @@ header {
 }
 
 .btn-navbar {
-    padding: 5px 15px;
+    padding: 6px 16px;
     border: 1px solid #777;
-    border-radius: 5px;
+    border-radius: 6px;
     background: transparent;
     color: white;
+    font-size: 15px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.btn-navbar:hover {
+    border-color: #c97e5f;
+    color: #c97e5f;
 }
 
 .link-profile {
@@ -776,14 +721,44 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-
     width: 40px;
     height: 40px;
-
     border-radius: 50%;
     background: white;
-
     font-size: 20px;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.link-profile:hover i {
+    transform: scale(1.05);
+    background: #c97e5f;
+    color: white;
+}
+
+/* Desktop: center brand absolutely */
+@media (min-width: 992px) {
+    .navbar>.container {
+        position: relative;
+    }
+
+    .navbar-brand {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .navbar-collapse {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .navbar-nav {
+        margin-right: auto !important;
+    }
+
+    .navbar-right {
+        margin-left: auto;
+    }
 }
 
 
@@ -797,22 +772,21 @@ header {
     display: flex;
     align-items: center;
     overflow: visible;
+    padding-top: 90px;
+    /* clears fixed navbar */
 }
 
 .hero-img {
     position: absolute;
     inset: 0;
-
     width: 100%;
     height: 100%;
-
     object-fit: cover;
 }
 
 .hero-overlay {
     position: absolute;
     inset: 0;
-
     background: rgba(0, 0, 0, 0.25);
 }
 
@@ -823,35 +797,29 @@ header {
 
 .hero-title {
     color: white;
-
     font-family: "Ubuntu", sans-serif;
-
-    font-size: clamp(42px, 6vw, 70px);
-
+    font-size: clamp(40px, 6vw, 70px);
     font-weight: 300;
-
     line-height: 1.1;
-
-    margin-bottom: 20px;
+    margin-bottom: 24px;
 }
 
 .btn-banner {
     background: #c97e5f;
     border: none;
     border-radius: 10px;
-
     color: white;
-
     font-size: 17px;
-
-    padding: 10px 20px;
-
+    padding: 12px 28px;
     transition: 0.4s;
+    cursor: pointer;
 }
 
-.btn-banner:hover {
-    background: #c97f5f;
+.btn-banner:hover,
+.btn-banner:focus {
+    background: #b56a4b;
     transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(201, 126, 95, 0.3);
 }
 
 
@@ -861,58 +829,65 @@ header {
 
 .booking-wrapper {
     position: absolute;
-
     z-index: 10;
-
     left: 50%;
-    bottom: -23px;
-
+    bottom: -35px;
     transform: translateX(-50%);
-
-    width: min(1200px, 90%);
-
+    width: min(1200px, 92%);
     background: white;
-
-    padding: 30px 40px;
-
-    border-radius: 5px;
-
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    padding: 28px 35px;
+    border-radius: 8px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
 }
 
 .booking-item {
-    border-right: 1px solid #777;
+    border-right: 1px solid #e0e0e0;
+    padding: 0 20px;
 }
 
-.booking-item h3 {
-    font-size: 18px;
-    color: #777;
+.booking-item:first-child {
+    padding-left: 0;
+}
+
+.booking-item:last-of-type {
+    border-right: none;
+}
+
+.booking-content h3 {
+    font-size: 16px;
+    color: #888;
     font-weight: 400;
+    margin-bottom: 6px;
 }
 
-.booking-item p {
-    margin-top: 15px;
+.booking-content p {
     font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    color: #222;
+    margin: 0;
 }
 
 .booking-button {
     width: 100%;
-
     padding: 16px 10px;
-
     border: none;
     border-radius: 20px;
-
     background: #efb08a;
-
     cursor: pointer;
-
     font-size: 16px;
+    color: #222;
+    transition: 0.3s;
+}
+
+.booking-button:hover,
+.booking-button:focus {
+    background: #e09e70;
+    transform: translateY(-1px);
 }
 
 .booking-button i {
     display: block;
-    font-size: 27px;
+    font-size: 26px;
     margin-bottom: 6px;
 }
 
@@ -922,36 +897,31 @@ header {
 /* ================================================= */
 
 .about-section {
-    margin: 120px 0;
+    margin: 110px 0 120px;
 }
 
 .about-text {
-    padding-left: 30px;
+    padding-left: 20px;
 }
 
 .about-text h1 {
     font-family: "Ubuntu", sans-serif;
-
-    font-size: clamp(45px, 5vw, 70px);
-
+    font-size: clamp(42px, 5vw, 70px);
     font-weight: 400;
 }
 
 .about-text p {
-    color: gray;
-
-    margin-top: 30px;
-
-    line-height: 1.6;
+    color: #666;
+    margin-top: 24px;
+    line-height: 1.7;
+    font-size: 16px;
 }
 
 .about-image {
     width: 100%;
     height: 350px;
-
     object-fit: cover;
-
-    border-radius: 10px;
+    border-radius: 12px;
 }
 
 .experience-card {
@@ -960,34 +930,35 @@ header {
 
 .experience {
     min-height: 130px;
-
     background: #282828;
-
-    border-radius: 10px;
-
+    border-radius: 12px;
     text-align: center;
-
     padding: 28px;
-
     color: white;
 }
 
 .experience h1 {
     font-size: 40px;
+    font-weight: 600;
 }
 
 .experience-image {
     height: 205px;
-    margin-top: 10px;
+    margin-top: 12px;
+    border-radius: 12px;
+    overflow: hidden;
 }
 
 .experience-image img {
     width: 100%;
     height: 100%;
-
     object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.6s;
+}
 
-    border-radius: 10px;
+.experience-image:hover img {
+    transform: scale(1.05);
 }
 
 
@@ -1001,29 +972,24 @@ header {
 
 .offer-content {
     min-height: 300px;
-
     background: #425a4d;
-
     color: white;
-
     padding: 60px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .offer-content h1 {
     font-family: "Ubuntu", sans-serif;
-
-    font-size: clamp(40px, 4vw, 50px);
-
+    font-size: clamp(36px, 4vw, 50px);
     font-weight: 300;
-
     margin-bottom: 20px;
 }
 
 .offer-content h3 {
-    font-size: 23px;
-
+    font-size: 22px;
     font-weight: 400;
-
     margin-bottom: 10px;
 }
 
@@ -1034,31 +1000,42 @@ header {
 
 .offer-content span {
     color: #ddd;
+    font-size: 16px;
 }
 
 .offer-content button {
     border: none;
-
     border-radius: 20px;
-
-    padding: 10px 15px;
-
+    padding: 12px 24px;
     background: #c97e5f;
-
     color: white;
+    font-size: 16px;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: 0.3s;
+}
 
-    font-size: 17px;
+.offer-content button:hover,
+.offer-content button:focus {
+    background: #b56a4b;
+    transform: translateY(-2px);
 }
 
 .offer-image {
     height: 300px;
     background: #2e3b34;
+    overflow: hidden;
 }
 
 .offer-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.6s;
+}
+
+.offer-image:hover img {
+    transform: scale(1.05);
 }
 
 
@@ -1072,11 +1049,14 @@ header {
 
 .mySwiper {
     width: 100%;
-    height: 500px;
+    aspect-ratio: 16 / 7;
+    max-height: 520px;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .swiper-slide {
-    border-radius: 5px;
+    border-radius: 8px;
     overflow: hidden;
 }
 
@@ -1093,67 +1073,66 @@ header {
 
 .vehicles-section {
     margin: 50px 0;
-
     background: #ece7e4;
-
-    padding: 50px 0;
+    padding: 60px 0;
 }
 
 .section-title {
-    font-size: clamp(32px, 4vw, 40px);
-    margin-bottom: 20px;
+    font-family: "Ubuntu", sans-serif;
+    font-size: clamp(30px, 4vw, 40px);
+    margin-bottom: 30px;
+    font-weight: 500;
 }
 
 .vehicle-card {
-    height: 255px;
-
+    min-height: 260px;
     background: white;
-
     border-radius: 20px;
-
     overflow: hidden;
-
     transition: 0.5s;
+    display: flex;
+    flex-direction: column;
 }
 
 .vehicle-card:hover {
-    transform: translateY(-5px);
-
+    transform: translateY(-6px);
     box-shadow:
         rgba(0, 0, 0, 0.2) 0px 12px 28px,
         rgba(0, 0, 0, 0.1) 0px 2px 4px;
 }
 
 .vehicle-info {
-    height: 50%;
-    padding: 10px 20px;
+    padding: 18px 20px;
+    flex: 1;
 }
 
 .vehicle-info h2 {
-    font-size: 19px;
+    font-size: 18px;
     font-weight: 500;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
+    line-height: 1.3;
 }
 
 .vehicle-info p {
     font-weight: 300;
+    font-size: 15px;
+    margin: 0;
 }
 
 .vehicle-info span {
-    color: gray;
+    color: #888;
+    font-size: 13px;
 }
 
 .vehicle-image {
-    height: 50%;
+    height: 160px;
     overflow: hidden;
 }
 
 .vehicle-image img {
     width: 100%;
     height: 100%;
-
     object-fit: cover;
-
     transition: 0.7s;
 }
 
@@ -1168,186 +1147,229 @@ header {
 
 .footer {
     background: #111;
-
-    color: #ccc;
-
-    padding: 50px 0 20px;
+    color: #bbb;
+    padding: 60px 0 20px;
 }
 
 .footer-logo {
     font-size: 40px;
-
     color: #c97e5f;
-
     font-family: "Ubuntu", sans-serif;
-
     font-weight: 500;
+    margin-bottom: 16px;
 }
 
 .footer h3 {
     font-size: 16px;
-
     color: white;
-
-    margin-bottom: 15px;
+    margin-bottom: 18px;
+    font-weight: 500;
 }
 
 .footer p {
-    line-height: 1.6;
+    line-height: 1.7;
+    font-size: 15px;
 }
 
 .footer ul {
     padding: 0;
     list-style: none;
+    margin: 0;
 }
 
 .footer ul li {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 .footer a {
-    color: #ccc;
+    color: #bbb;
     text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s;
 }
 
-.footer a:hover {
+.footer a:hover,
+.footer a:focus {
     color: #c97e5f;
 }
 
 .social-icons {
-    margin-top: 15px;
+    margin-top: 18px;
+    display: flex;
+    gap: 8px;
 }
 
 .social-icons a {
     display: inline-flex;
-
     align-items: center;
     justify-content: center;
-
-    width: 35px;
-    height: 35px;
-
-    margin-right: 5px;
-
-    border-radius: 4px;
-
+    width: 38px;
+    height: 38px;
+    border-radius: 6px;
     background: #333;
+    color: #ccc;
+    font-size: 16px;
+    transition: 0.3s;
 }
 
-.social-icons a:hover {
+.social-icons a:hover,
+.social-icons a:focus {
     background: #c97e5f;
     color: white;
+    transform: translateY(-2px);
 }
 
 .footer-bottom {
     text-align: center;
-
-    padding-top: 20px;
-
-    margin-top: 30px;
-
-    font-size: 12px;
-
+    padding-top: 24px;
+    margin-top: 40px;
+    font-size: 13px;
     color: #777;
-
     border-top: 1px solid #333;
 }
 
 
 /* ================================================= */
-/* TABLET */
+/* TABLET (≤991px) */
 /* ================================================= */
 
 @media (max-width: 991px) {
 
     .navbar {
-        background: rgba(0, 0, 0, 0.85);
+        background: rgba(0, 0, 0, 0.9);
         padding: 12px 0;
     }
 
     .navbar-collapse {
-        padding: 20px 0;
+        background: rgba(0, 0, 0, 0.95);
+        padding: 15px;
+        border-radius: 10px;
+        margin-top: 10px;
     }
 
     .navbar-nav {
         text-align: center;
+        padding: 10px 0;
     }
 
-    .navbar-brand {
-        margin: 0 auto;
+    .nav-link {
+        padding: 12px !important;
+        font-size: 16px;
     }
 
     .navbar-right {
         justify-content: center;
-        margin-top: 15px;
+        padding: 10px 0;
     }
 
     .hero-section {
         min-height: 700px;
+        padding-top: 80px;
     }
 
     .hero-title {
         font-size: 55px;
     }
 
+    /* Booking becomes part of document flow with negative margin overlap */
     .booking-wrapper {
-        bottom: -170px;
-
-        width: 90%;
-
-        padding: 20px 25px;
+        position: relative;
+        left: auto;
+        bottom: auto;
+        transform: none;
+        margin: -70px auto 0;
+        width: 94%;
+        padding: 22px 25px;
     }
 
     .booking-item {
         border-right: none;
-        border-bottom: 1px solid #ddd;
+        border-bottom: 1px solid #eee;
+        padding: 14px 0;
+    }
 
-        padding: 15px 0;
+    .booking-item:last-child {
+        border-bottom: none;
+    }
+
+    .booking-content h3 {
+        font-size: 15px;
+    }
+
+    .booking-content p {
+        font-size: 14px;
     }
 
     .about-section {
-        margin-top: 230px;
+        margin: 60px 0;
     }
 
     .about-text {
         padding-left: 0;
+        text-align: center;
+    }
+
+    .about-image {
+        height: 320px;
+    }
+
+    .experience h1 {
+        font-size: 36px;
+    }
+
+    .experience-image {
+        height: 220px;
+    }
+
+    .offer-section {
+        margin-top: 60px;
     }
 
     .offer-content {
-        padding: 50px;
+        padding: 50px 40px;
+        min-height: auto;
+    }
+
+    .offer-image {
+        height: 350px;
     }
 
     .mySwiper {
-        height: 400px;
+        aspect-ratio: 16 / 9;
+        max-height: 420px;
     }
 
     .vehicle-card {
-        height: 270px;
+        min-height: 280px;
     }
 
+    .vehicle-image {
+        height: 180px;
+    }
 }
 
 
 /* ================================================= */
-/* MOBILE */
+/* MOBILE (≤576px) */
 /* ================================================= */
 
 @media (max-width: 576px) {
 
     .navbar {
-        padding: 10px 15px;
+        padding: 10px 0;
     }
 
     .navbar-brand {
-        font-size: 25px;
+        font-size: 26px;
     }
 
     .nav-link {
-        font-size: 16px;
+        font-size: 15px;
     }
 
     .hero-section {
-        min-height: 650px;
+        min-height: 600px;
+        padding-top: 70px;
     }
 
     .hero-title {
@@ -1356,13 +1378,13 @@ header {
 
     .btn-banner {
         font-size: 15px;
+        padding: 10px 22px;
     }
 
     .booking-wrapper {
-        width: 94%;
-        bottom: -300px;
-
-        padding: 20px;
+        width: 95%;
+        margin-top: -50px;
+        padding: 18px;
     }
 
     .booking-item {
@@ -1370,50 +1392,47 @@ header {
     }
 
     .booking-item h3 {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .booking-item p {
-        font-size: 14px;
-        margin-top: 8px;
+        font-size: 13px;
+        margin-top: 4px;
     }
 
     .booking-button {
-        margin-top: 15px;
+        margin-top: 10px;
+        padding: 14px 10px;
+        font-size: 15px;
     }
 
     .about-section {
-        margin-top: 360px;
-        margin-bottom: 70px;
-    }
-
-    .about-text {
-        padding: 0;
+        margin: 40px 0;
     }
 
     .about-text h1 {
-        font-size: 48px;
+        font-size: 42px;
     }
 
     .about-text p {
-        margin-top: 20px;
+        margin-top: 16px;
         font-size: 15px;
     }
 
     .about-image {
-        height: 280px;
+        height: 260px;
     }
 
     .experience h1 {
-        font-size: 34px;
+        font-size: 32px;
     }
 
     .experience-image {
-        height: 220px;
+        height: 200px;
     }
 
     .offer-section {
-        margin-top: 50px;
+        margin-top: 40px;
     }
 
     .offer-content {
@@ -1421,15 +1440,15 @@ header {
     }
 
     .offer-content h1 {
-        font-size: 40px;
+        font-size: 36px;
     }
 
     .offer-content h3 {
-        font-size: 20px;
+        font-size: 19px;
     }
 
     .offer-image {
-        height: 250px;
+        height: 260px;
     }
 
     .slider-section {
@@ -1437,7 +1456,8 @@ header {
     }
 
     .mySwiper {
-        height: 280px;
+        aspect-ratio: 4 / 3;
+        max-height: 320px;
     }
 
     .vehicles-section {
@@ -1445,8 +1465,20 @@ header {
         padding: 40px 0;
     }
 
+    .section-title {
+        margin-bottom: 24px;
+    }
+
     .vehicle-card {
-        height: 270px;
+        min-height: 260px;
+    }
+
+    .vehicle-info h2 {
+        font-size: 17px;
+    }
+
+    .vehicle-image {
+        height: 150px;
     }
 
     .footer {
@@ -1454,14 +1486,22 @@ header {
     }
 
     .footer-logo {
-        font-size: 35px;
+        font-size: 34px;
     }
 
+    .footer h3 {
+        margin-bottom: 14px;
+    }
+
+    .footer .col-lg-4,
+    .footer .col-lg-2 {
+        margin-bottom: 10px;
+    }
 }
 
 
 /* ================================================= */
-/* VERY SMALL PHONE */
+/* VERY SMALL PHONE (≤375px) */
 /* ================================================= */
 
 @media (max-width: 375px) {
@@ -1471,20 +1511,20 @@ header {
     }
 
     .booking-wrapper {
-        bottom: -315px;
-    }
-
-    .about-section {
-        margin-top: 380px;
+        margin-top: -45px;
+        padding: 16px;
     }
 
     .about-text h1 {
-        font-size: 42px;
+        font-size: 38px;
     }
 
     .mySwiper {
-        height: 230px;
+        max-height: 260px;
     }
 
+    .vehicle-card {
+        min-height: 240px;
+    }
 }
 </style>
