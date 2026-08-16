@@ -1,0 +1,18 @@
+/* main.css */
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.btn-primary {
+    border-radius: 8px;
+}
+
+.container {
+    max-width: 1200px;
+}
