@@ -12,7 +12,7 @@ import 'swiper/css'
 
 import heroImage from '../assets/images/rolls_royce_boat_tail_2022_4kk.jpg'
 import aboutImage from '../assets/images/koe-goblin.avif'
-import experienceImage from '../assets/images/Rolls-Royce-Boat-Tail.jpg'
+import experienceImage from '../assets/images/rolls-royce-boat-tail.jpg'
 import bentleyImage from '../assets/images/green-bentley.jpg'
 
 import mclarenImage from '../assets/images/750s.avif'
